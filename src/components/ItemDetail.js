@@ -9,8 +9,8 @@ const items = [
 ];
 
 function ItemDetail() {
-  const { id } = useParams(); 
-  const item = items.find(item => item.id === parseInt(id));
+  const { id } = useParams(); // Extract item ID from the URL
+  const item = items.find(item => item.id === parseInt(id)); // Find the item by ID
 
   if (!item) {
     return <p>Item not found</p>;
@@ -18,8 +18,8 @@ function ItemDetail() {
 
   return (
     <div>
-      <h2>{item.name}</h2>
-      <p>{item.description}</p>
+      <h1>{item.name}</h1> {/* Render item name inside an h1 tag */}
+      <p>{item.description}</p> {/* Render item description */}
     </div>
   );
 }
